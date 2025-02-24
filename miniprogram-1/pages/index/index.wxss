@@ -1,0 +1,144 @@
+/* 主容器，设置为 flexbox 布局，排列方向为垂直方向 */
+.container {
+  display: flex; /* 使用 flexbox 布局 */
+  justify-content: space-between; /* 两端对齐，左右最大化利用空间 */
+  flex-direction: column; /* 垂直排列内容 */
+  padding: 10px; /* 内边距 10px，确保内容不贴边 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 搜索框容器，设置宽度为100%，并居中 */
+.search-container {
+  width: 93%; /* 宽度为 100% */
+  margin-bottom: 5px; /* 下边距 20px，给下方内容留白 */
+  text-align: center; /* 居中搜索框 */
+}
+
+/* 搜索框样式，宽度为 95%，并设置圆角和边框 */
+.search-input {
+  width: 95%; /* 宽度 95% */
+  padding: 4px; /* 内边距 10px，增大点击区域 */
+  border: 1px solid #ccc; /* 边框颜色为浅灰色 */
+  border-radius: 5px; /* 圆角边框 */
+  margin: 0 auto; /* 水平居中 */
+}
+
+
+/* 包裹左侧分类栏和右侧菜品列表的容器，使用 flexbox 布局 */
+.box {
+  display: flex; /* 使用 flexbox 布局 */
+  margin-top: 1px; /* 上边距 20px，给内容留白 */
+}
+
+/* 左侧分类栏，设置宽度为 20%，高度 500px，超出部分可以滚动 */
+.scroll-container-left {
+  width: 19%; /* 左侧分类栏占宽度 20% */
+  height: 500px; /* 固定高度 500px */
+  overflow-y: scroll; /* 内容超出时可以垂直滚动 */
+  margin-right: 10px; /* 右边距 20px，留出空间与右侧内容分开 */
+}
+
+/* 分类项容器，使用垂直排列 */
+.category-container {
+  display: flex; /* 使用 flexbox 布局 */
+  flex-direction: column; /* 垂直排列 */
+}
+
+/* 分类项样式，添加内边距、背景色、圆角、以及居中对齐 */
+.category-item {
+  padding: 10px; /* 内边距 10px */
+  background-color: #f8f8f8; /* 背景色为浅灰色 */
+  margin-bottom: 10px; /* 下边距 10px，分类项之间有空隙 */
+  border-radius: 5px; /* 圆角效果 */
+  text-align: center; /* 文本居中 */
+  cursor: pointer; /* 鼠标悬停时显示点击效果 */
+}
+
+/* 分类项鼠标悬停时的效果，背景色变为橙色，字体颜色变白 */
+.category-item:hover {
+  background-color: #ff8c00; /* 悬停时背景变橙色 */
+  color: white; /* 字体颜色变白 */
+}
+
+/* 右侧内容容器，宽度为 95%，垂直排列 */
+.right-container {
+  width: 100%; /* 右侧容器宽度 95% */
+  display: flex; /* 使用 flexbox 布局 */
+  flex-direction: column; /* 垂直排列 */
+}
+
+/* 所有菜品容器，设置为可滚动 */
+.scroll-container-all-dishes {
+  width: 94%; /* 宽度为 100% */
+  overflow-y: scroll; /* 超出部分可垂直滚动 */
+}
+
+/* 菜单项列表容器，使用 flexbox 布局，并设置换行和间距 */
+.menu-list {
+  display: flex; /* 使用 flexbox 布局 */
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 20px; /* 菜单项之间的间隙为 20px */
+}
+
+/* 菜单项样式，设置背景色、边框、内边距、圆角等 */
+.menu-item {
+  width: 91.5%; /* 菜单项宽度为 91.5% */
+  background-color: #fff; /* 背景色为白色 */
+  padding: 10px; /* 内边距 10px */
+  border: 1px solid #ddd; /* 边框颜色为浅灰色 */
+  border-radius: 5px; /* 圆角效果 */
+  display: flex; /* 使用 flexbox 布局 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+/* 菜品图片样式，宽度为 30%，高度固定为 100px */
+.menu-image {
+  width: 45%; /* 图片宽度为 30% */
+  height: 100px; /* 图片高度固定为 100px */
+  object-fit: cover; /* 保证图片填充区域并保持比例 */
+}
+
+/* 菜品信息区域，设置左侧填充并设置宽度 */
+.menu-info {
+  padding-left: 10px; /* 左侧内边距 6px */
+  width: 50%; /* 宽度为 50% */
+  display: flex; /* 使用 flexbox 布局 */
+  flex-direction: column; /* 垂直排列 */
+  justify-content: center; /* 垂直居中 */
+
+}
+
+/* 菜品名称样式，字体加粗，字号为 16px */
+.menu-name {
+  font-size: 16px; /* 字号 16px */
+  font-weight: bold; /* 字体加粗 */
+  display: flex; /* 使用 flexbox 布局 */
+  /* justify-content: center; 水平居中 */
+  align-items: center; /* 垂直居中 */
+
+}
+
+/* 菜品价格和评分样式，字体颜色为灰色，字号为 14px */
+.menu-price,
+.menu-rating {
+  font-size: 14px; /* 字号 14px */
+  color: #999; /* 字体颜色为灰色 */
+}
+
+/* 加入购物车按钮样式，设置为圆形，橙色背景，字体居中 */
+.add-to-cart-btn {
+  width: 25px; /* 按钮宽度为 25px */
+  height: 25px; /* 按钮高度为 25px */
+  background-color: #ff8c00; /* 背景色为橙色 */
+  color: white; /* 字体颜色为白色 */
+  border-radius: 50%; /* 圆形按钮 */
+  font-size: 20px; /* 字号为 20px */
+  border: none; /* 无边框 */
+  margin-top: -23px; /* 向上移动 5px */
+  /* margin-top: 0; 清除顶部的外边距 */
+  display: flex; /* 使用 flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  margin-right: 10px; /* 保证按钮靠近右侧 */
+}

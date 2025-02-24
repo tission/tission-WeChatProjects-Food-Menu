@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",  
+    "pages/detail/detail", 
+    "pages/cart/cart",     
+    "pages/checkout/checkout", 
+    "pages/history/history",  
+    "pages/admin/admin"       
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "小程序菜单", 
+    "navigationBarTextStyle": "black" 
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart_selected.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史订单",
+        "iconPath": "images/history.png",
+        "selectedIconPath": "images/history_selected.png"
+      },
+      {
+        "pagePath": "pages/admin/admin",
+        "text": "管理员",
+        "iconPath": "images/admin.png",
+        "selectedIconPath": "images/admin_selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000, 
+    "downloadFile": 30000 
+  },
+  "debug": true  
+}

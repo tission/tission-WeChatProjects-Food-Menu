@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- 导入导出按钮 -->
+  <view class="export-import-buttons">
+    <button class="export-btn" bindtap="onExport">导出</button>
+    <button class="import-btn" bindtap="onImport">导入</button>
+  </view>
+
+  <!-- 右下角添加菜品按钮 -->
+  <button class="add-dish-btn" bindtap="onAddDish">new！</button>
+
+  <!-- 菜品列表 -->
+  <view class="dish-list">
+    <!-- 表头 -->
+    <view class="dish-list-header">
+      <text class="header-id">No.</text>
+      <text class="header-image">菜品照片</text>
+      <text class="header-name">菜名</text>
+      <text class="header-date">日期</text>
+      <text class="header-actions">操作</text>
+    </view>
+
+    <!-- 菜品项 -->
+    <block wx:for="{{menuItems}}" wx:key="id">
+      <view class="dish-item">
+        <text class="dish-id">{{item.serialNumber}}</text>
+        <image class="dish-image" src="{{item.image}}" mode="aspectFill" />
+        <text class="dish-name">{{item.name}}</text>
+        <text class="dish-date">{{item.createdDate}}</text> <!-- 显示已格式化的日期 -->
+        <view class="dish-actions">
+          <button class="edit-btn" bindtap="onEditDish" data-id="{{item.id}}">编辑</button>
+          <button class="delete-btn" bindtap="onDeleteDish" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

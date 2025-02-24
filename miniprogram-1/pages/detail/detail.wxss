@@ -1,0 +1,96 @@
+.container {
+  /* padding: 10px; */
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.dish-image {
+  width: 92%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.dish-info {
+  margin-top: 10px;
+  
+}
+
+.dish-name {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.dish-price {
+  font-size: 16px;
+  color: #ff8c00;
+}
+
+.ingredient-container {
+  margin-top: 10px;
+}
+
+.ingredient-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ingredients, .taste {
+  margin-top: 5px;
+}
+
+.ingredient-item {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;  /* 添加间距，让每个成分有更好的可读性 */
+}
+
+.taste-container {
+  margin-top: 10px;
+}
+
+.taste-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.taste {
+  font-size: 14px;
+  color: #666;
+}
+
+.steps-container {
+  margin-top: 15px;
+}
+
+.steps-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.step {
+  margin-top: 10px;
+}
+
+.step-number {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 加入购物车按钮样式 */
+.add-to-cart-btn {
+  margin-top: 20px; /* 设置按钮顶部外边距为 20px，控制按钮与其他元素的间距 */
+  width: 96%; /* 设置按钮宽度为 100%，使其占据父容器的全部宽度 */
+  padding: 0px; /* 去除按钮的内边距，确保按钮的大小仅由宽度和高度决定 */
+  background-color: #ff8c00; /* 设置按钮背景色为橙色 */
+  color: white; /* 设置按钮文字颜色为白色 */
+  border: none; /* 去除按钮的边框 */
+  border-radius: 5px; /* 设置按钮的圆角为 5px，形成圆角效果 */
+  font-size: 16px; /* 设置按钮文字的字号为 16px */
+  margin-left: -10px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+}

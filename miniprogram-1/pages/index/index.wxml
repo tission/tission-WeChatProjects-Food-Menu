@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-container">
+    <input class="search-input" placeholder="搜索菜品、食材" bindinput="onSearchInput" bindconfirm="onSearchConfirm"/>
+  </view>
+
+  <!-- 使用 scroll-view 实现菜品分类、推荐菜品和菜品展示都在一个box内 -->
+  <view class="box">
+    <!-- 左侧菜品分类 -->
+    <scroll-view class="scroll-container-left" scroll-y="true">
+      <view class="category-container">
+        <block wx:for="{{categories}}" wx:key="id">
+          <view class="category-item" bindtap="onCategoryClick" data-category="{{item.name}}">
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+
+    <!-- 右侧，显示所有菜品 -->
+    <view class="right-container">
+      <!-- 所有菜品 -->
+      <scroll-view class="scroll-container-all-dishes" scroll-y="true">
+        <view class="menu-list">
+          <block wx:for="{{filteredMenu}}" wx:key="id">
+            <view class="menu-item">
+              <!-- 菜品图片点击跳转到详情页面 -->
+              <image class="menu-image" src="{{item.image}}" bindtap="onDishClick" data-id="{{item.id}}" />
+              <view class="menu-info">
+                <text class="menu-name">{{item.name}}</text>
+                <!-- 加号按钮点击加入购物车 -->
+                <button class="add-to-cart-btn" bindtap="onAddToCart" data-id="{{item.id}}">+</button>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

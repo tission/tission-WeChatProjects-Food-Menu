@@ -1,0 +1,76 @@
+<view class="container">
+  <view class="form-section">
+    <!-- 菜品图片 -->
+    <view class="form-item">
+      <!-- <text>菜品图片</text> -->
+      <image class="image" src="{{imagePath}}" mode="aspectFill" bindtap="onChooseImage" />
+      <button class="choose-image-btn" bindtap="onChooseImage">图片编辑</button>
+    </view>
+
+    <!-- 菜品名称 -->
+    <view class="form-item">
+      <text>菜品名称</text>
+      <input class="input" value="{{form.name}}" placeholder="请输入菜品名称" bindinput="onInputChange" data-field="name"/>
+    </view>
+
+    <!-- 菜品类型 -->
+    <view class="form-item">
+      <text>菜品类型</text>
+      <picker mode="selector" value="{{form.category}}" range="{{['素菜', '荤菜', '主食', '汤品', '饮品', '其他']}}" bindchange="onPickerChange" data-field="category">
+        <view class="picker">
+          {{form.category || '请选择类型'}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 菜品口味 -->
+    <view class="form-item">
+      <text>口味</text>
+      <input class="input" value="{{form.flavor}}" placeholder="请输入口味" bindinput="onInputChange" data-field="flavor"/>
+    </view>
+
+    <!-- 成分表格 -->
+    <view class="form-item">
+      <text>成分表格</text>
+      <button class="add-ingredient-btn" bindtap="onAddIngredient">添加成分</button>
+      <block wx:for="{{form.ingredients}}" wx:key="index">
+        <view class="ingredient">
+          <input class="input" value="{{item.name}}" placeholder="成分名称" bindinput="onEditIngredient" data-index="{{index}}" data-field="name"/>
+          <input class="input" value="{{item.quantity}}" placeholder="数量" bindinput="onEditIngredient" data-index="{{index}}" data-field="quantity"/>
+          <input class="input" value="{{item.unit}}" placeholder="单位" bindinput="onEditIngredient" data-index="{{index}}" data-field="unit"/>
+          <button class="delete-ingredient-btn" bindtap="onDeleteIngredient" data-index="{{index}}">删除</button>
+        </view>
+      </block>
+    </view>
+
+<!-- 制作步骤 -->
+<view class="form-item">
+  <text>制作步骤</text>
+  <block wx:for="{{form.steps}}" wx:key="index">
+    <view class="step">
+      <input 
+        class="input" 
+        value="{{item}}" 
+        placeholder="请输入制作步骤" 
+        bindinput="onEditStep" 
+        bindconfirm="onStepInputConfirm"  
+        data-index="{{index}}"
+      />
+    </view>
+  </block>
+  <input 
+    class="input" 
+    placeholder="添加步骤" 
+    bindinput="onEditStep" 
+    bindconfirm="onStepInputConfirm"  
+    data-index="{{form.steps.length}}"
+  />
+</view>
+</view>
+  
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="cancel-btn" bindtap="onCancel">取消</button>
+    <button class="submit-btn" bindtap="onSubmit">{{isEdit ? '保存' : '提交'}}</button>
+  </view>
+</view>

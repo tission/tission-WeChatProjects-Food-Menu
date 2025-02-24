@@ -1,0 +1,43 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-title">
+    <!-- <text>历史订单</text> -->
+  </view>
+
+  <!-- 历史订单列表 -->
+  <view class="order-list">
+    <block wx:for="{{orders}}" wx:key="orderId">
+      <view class="order-item">
+        <view class="order-header">
+          <text class="order-id">订单号：{{item.orderId}}</text>
+          <text class="order-status">{{item.status}}</text>
+        </view>
+        <view class="order-details">
+          <text class="order-date">日期：{{item.date}}</text>
+        </view>
+        <!-- 显示订单详情部分 -->
+        <view wx:if="{{item.showDetails}}">
+          <view class="order-detail-header">
+            <text class="order-detail-title">序号</text>
+            <text class="order-detail-title">菜品名称</text>
+            <text class="order-detail-title">数量</text>
+          </view>
+          <view class="order-detail-list">
+            <block wx:for="{{item.items}}" wx:key="index">
+              <view class="order-detail-item">
+                <text>{{index + 1}}</text>
+                <text>{{item.name}}</text>
+                <text>{{item.quantity}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="order-actions">
+          <button class="view-details-btn" bindtap="onViewOrderDetails" data-id="{{item.orderId}}">查看详情</button>
+          <button class="reorder-btn" bindtap="onReorder" data-id="{{item.orderId}}">重新下单</button>
+          <button class="delete-btn" bindtap="onDeleteOrder" data-id="{{item.orderId}}">删除订单</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

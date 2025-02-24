@@ -1,0 +1,43 @@
+<view class="container">
+  <!-- 菜品图片 -->
+  <image class="dish-image" src="{{dish.image}}" mode="aspectFill" />
+
+  <!-- 菜品详细信息 -->
+  <view class="dish-info">
+    <text class="dish-name">{{dish.name}}</text>
+    <!-- <text class="dish-price">￥{{dish.price}}</text> -->
+  </view>
+
+  <!-- 成分 -->
+  <view class="ingredient-container">
+    <text class="ingredient-title">主要成分</text>
+    <view class="ingredients">
+      <block wx:for="{{dish.ingredients}}" wx:key="ingredient">
+        <text class="ingredient-item">{{item.name}}  {{item.quantity}} {{item.unit}}
+        </text>
+      </block>
+    </view>
+  </view>
+
+  <!-- 口味 -->
+  <view class="taste-container">
+    <text class="taste-title">口味</text>
+    <view class="taste">
+      <text>{{dish.flavor}}</text>
+    </view>
+  </view>
+
+  <!-- 制作步骤 -->
+  <view class="steps-container">
+    <text class="steps-title">制作步骤</text>
+    <block wx:for="{{dish.preparationSteps}}" wx:key="step">
+      <view class="step">
+        <text class="step-number">步骤 {{index + 1}}: </text>
+        <text class="step-description">{{item}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 加入购物车按钮 -->
+  <button class="add-to-cart-btn" bindtap="onAddToCart">加入购物车</button>
+</view>

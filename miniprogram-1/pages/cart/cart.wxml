@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 购物车标题 -->
+  <view class="cart-title">
+    <!-- <text>购物车</text> -->
+  </view>
+
+  <!-- 购物车列表 -->
+  <view class="cart-list">
+    <block wx:for="{{cartItems}}" wx:key="id">
+      <view class="cart-item">
+        <!-- 菜品图片 -->
+        <image class="cart-item-image" src="{{item.image}}" mode="aspectFill" />
+        
+        <view class="cart-item-info">
+          <text class="cart-item-name">{{item.name}}</text>
+
+          <!-- 食材清单 -->
+          <view class="ingredient-list">
+            <!-- <text class="ingredient-title">食材原料</text> -->
+            <block wx:for="{{item.ingredients}}" wx:key="ingredient">
+              <!-- <text class="ingredient-item">{{ingredient.name}}: {{ingredient.quantity}} {{ingredient.unit}}</text> -->
+            </block>
+          </view>
+
+          <!-- 数量和编辑按钮 -->
+          <view class="cart-item-quantity">
+            <button class="quantity-btn" bindtap="onDecreaseQuantity" data-id="{{item.id}}">-</button>
+            <text class="quantity">{{item.quantity}}</text>
+            <button class="quantity-btn" bindtap="onIncreaseQuantity" data-id="{{item.id}}">+</button>
+          </view>
+
+          <!-- 删除按钮 -->
+          <button class="delete-btn" bindtap="onDeleteItem" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 食材清单表格 -->
+  <view class="ingredient-table">
+    <view class="ingredient-header">
+      <text class="ingredient-name">食材</text>
+      <text class="ingredient-quantity">数量</text>
+      <text class="ingredient-unit">单位</text>
+    </view>
+    <block wx:for="{{ingredientsList}}" wx:key="name">
+      <view class="ingredient-row">
+        <text class="ingredient-name">{{item.name}}</text>
+        <text class="ingredient-quantity">{{item.quantity}}</text>
+        <text class="ingredient-unit">{{item.unit}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 总价
+  <view class="cart-total">
+    <text>总价: ￥{{totalPrice}}</text>
+  </view> -->
+
+  <!-- 保存订单按钮 -->
+  <button class="save-order-btn" bindtap="onSaveOrder">保存订单</button>
+</view>

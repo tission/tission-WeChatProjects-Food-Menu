@@ -1,0 +1,121 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.page-title {
+  font-size: 0px; /* 设置页面标题的字体大小为20px */
+  font-weight: bold; /* 设置页面标题的字体加粗 */
+  margin-bottom: 0px; /* 设置页面标题底部的外边距为20px */
+}
+
+.order-list {
+  margin-bottom: 10px; /* 设置订单列表底部的外边距为20px */
+  width: 94%; /* 设置每个订单详情标题的宽度为父容器的33% */
+}
+
+.order-item {
+  padding: 10px; /* 设置订单项的内边距为10px */
+  background-color: #fff; /* 设置订单项的背景色为白色 */
+  margin-bottom: 10px; /* 设置订单项底部的外边距为10px */
+  border-radius: 5px; /* 设置订单项的圆角半径为5px */
+  border: 1px solid #ddd; /* 设置订单项的边框颜色为浅灰色 */
+}
+
+.order-header {
+  display: flex; /* 设置订单头部为flex布局 */
+  justify-content: space-between; /* 设置订单头部子元素在主轴上两端对齐 */
+  
+}
+
+.order-id {
+  font-size: 16px; /* 设置订单ID的字体大小为16px */
+  font-weight: bold; /* 设置订单ID的字体加粗 */
+}
+
+.order-status {
+  font-size: 14px; /* 设置订单状态的字体大小为14px */
+  color: #ff8c00; /* 设置订单状态的颜色为橙色 */
+}
+
+.order-details {
+  margin-top: 5px; /* 设置订单详细信息的顶部外边距为10px */
+}
+
+.order-date {
+  font-size: 14px; /* 设置订单日期的字体大小为14px */
+  color: #666; /* 设置订单日期的字体颜色为深灰色 */
+}
+
+.order-actions {
+  margin-top: 5px; /* 设置订单操作区域顶部的外边距为10px */
+  display: flex; /* 设置订单操作区域为flex布局 */
+  width: 95%; /* 宽度为 50% */
+  justify-content: space-between; /* 设置订单操作区域子元素在主轴上两端对齐 */
+}
+
+.view-details-btn,
+.reorder-btn,
+.delete-btn {
+  width: 30%; /* 设置按钮的宽度为父容器的30% */
+  padding: 8px; /* 设置按钮的内边距为8px */
+  font-size: 14px; /* 设置按钮的字体大小为14px */
+  border: none; /* 去掉按钮的边框 */
+  border-radius: 5px; /* 设置按钮的圆角半径为5px */
+  margin-left: 25px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+}
+
+.view-details-btn {
+  background-color: #00bcd4; /* 设置“查看详情”按钮的背景色为青色 */
+  color: white; /* 设置按钮文本颜色为白色 */
+}
+
+.view-details-btn:hover {
+  background-color: #007c8c; /* 设置鼠标悬停时“查看详情”按钮的背景色为较深的青色 */
+}
+
+.reorder-btn {
+  background-color: #4caf50; /* 设置“重新订购”按钮的背景色为绿色 */
+  color: white; /* 设置按钮文本颜色为白色 */
+}
+
+.reorder-btn:hover {
+  background-color: #388e3c; /* 设置鼠标悬停时“重新订购”按钮的背景色为较深的绿色 */
+}
+
+.delete-btn {
+  background-color: #f44336; /* 设置“删除”按钮的背景色为红色 */
+  color: white; /* 设置按钮文本颜色为白色 */
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f; /* 设置鼠标悬停时“删除”按钮的背景色为较深的红色 */
+}
+
+.order-detail-header {
+  display: flex; /* 设置订单详情头部为flex布局 */
+  justify-content: space-between; /* 设置订单详情头部子元素在主轴上两端对齐 */
+  font-weight: bold; /* 设置订单详情头部文本为加粗 */
+  margin-top: 5px; /* 设置订单详情头部的顶部外边距为10px */
+}
+
+.order-detail-title {
+  width: 33%; /* 设置每个订单详情标题的宽度为父容器的33% */
+  text-align: center; /* 设置订单详情标题文本居中对齐 */
+}
+
+.order-detail-list {
+  margin-top: 10px; /* 设置订单详情列表的顶部外边距为10px */
+  width: 70%; /* 设置每个订单详情标题的宽度为父容器的33% */
+  display: flex; /* 使用 flexbox 布局 */
+  justify-content: space-between; /* 两端对齐，左右最大化利用空间 */
+  flex-direction: column; /* 垂直排列内容 */
+  margin-left: 54px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+
+}
+
+.order-detail-item {
+  display: flex; /* 设置订单详情项为flex布局 */
+  justify-content: space-between; /* 设置订单详情项子元素在主轴上两端对齐 */
+  padding: 5px 0; /* 设置订单详情项上下内边距为5px */
+}

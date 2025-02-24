@@ -1,0 +1,162 @@
+.container {
+  padding: 0px;
+  margin: 0;
+}
+
+.add-dish-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  width: 50px;
+  height: 30px;
+  background-color: rgb(255, 196, 0);
+  color: white;
+  border-radius: 50%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 6px;
+  z-index: 9999;
+}
+
+/* 导入导出按钮样式 */
+.export-import-buttons {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px; /* 按钮间距 */
+  z-index: 9998; /* 确保按钮在最上层 */
+}
+
+.export-btn, .import-btn {
+  padding: 10px;
+  background-color: #4CAF50; /* 导入导出按钮颜色 */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+
+.export-btn {
+  background-color: #2196F3; /* 导出按钮 */
+}
+
+.import-btn {
+  background-color: #f44336; /* 导入按钮 */
+}
+
+/* 菜品列表 */
+.dish-list {
+  margin-top: 5px;
+  width: 93%;
+}
+
+/* 表头样式 */
+.dish-list-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0px;
+  border-bottom: 2px solid #ddd;
+}
+
+.header-id,
+.header-image,
+.header-name,
+.header-date,
+.header-actions {
+  text-align: center;
+}
+
+.header-id {
+  width: 5%;
+}
+
+.header-image {
+  width: 25%;
+}
+
+.header-name {
+  width: 20%;
+}
+
+.header-date {
+  width: 20%;
+}
+
+.header-actions {
+  width: 20%;
+}
+
+/* 菜品项 */
+.dish-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 菜品编号样式 */
+.dish-id {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 菜品名称样式 */
+.dish-name {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 菜品日期样式 */
+.dish-date {
+  width: 20%;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* 菜品图片样式 */
+.dish-image {
+  width: 25%;
+  height: 90px;
+  object-fit: scale-down;
+}
+
+/* 操作按钮样式 */
+.dish-actions {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+/* 编辑按钮和删除按钮样式 */
+.edit-btn,
+.delete-btn {
+  padding: 1px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+/* 编辑按钮颜色 */
+.edit-btn {
+  background-color: #ff8c00;
+  color: white;
+}
+
+/* 删除按钮颜色 */
+.delete-btn {
+  background-color: red;
+  color: white;
+}

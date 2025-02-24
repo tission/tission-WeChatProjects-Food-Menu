@@ -1,0 +1,153 @@
+.container {
+  padding: 0px; /* 设置容器的内边距为10px */
+  margin: 0;
+}
+
+.cart-title {
+  font-size: 20px; /* 设置购物车标题的字体大小为20px */
+  font-weight: bold; /* 设置购物车标题的字体加粗 */
+  margin-bottom: 0px; /* 设置购物车标题下方的外边距为20px */
+}
+
+.cart-list {
+  margin-bottom: 10px; /* 设置购物车列表底部的外边距为20px */
+}
+
+.cart-item {
+  display: flex; /* 设置为flex布局，子元素沿主轴排列 */
+  width: 93%; /* 宽度为 50% */
+  justify-content: space-between; /* 两端对齐，左右最大化利用空间 */
+  padding: 5px; /* 设置购物车项的内边距为10px */
+  background-color: #fff; /* 设置购物车项的背景色为白色 */
+  margin-bottom: 10px; /* 设置购物车项底部的外边距为10px */
+  margin-left: -10px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+  border-radius: 5px; /* 设置购物车项的圆角半径为5px */
+  border: 1px solid #ddd; /* 设置购物车项的边框颜色为浅灰色 */
+}
+
+.cart-item-image {
+  width: 130px; /* 设置购物车项图片的宽度为100px */
+  height: 130px; /* 设置购物车项图片的高度为100px */
+  object-fit: cover; /* 使图片保持比例填满容器，裁剪多余部分 */
+  margin-right: 5px; /* 设置图片右侧的外边距为10px */
+}
+
+.cart-item-info {
+  flex: 1; /* 设置购物车项信息部分占据剩余的空间 */
+  
+}
+
+.cart-item-name {
+  font-size: 20px; /* 设置购物车项名称的字体大小为16px */
+  font-weight: bold; /* 设置购物车项名称的字体加粗 */
+  margin-left: 10px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+
+}
+
+.cart-item-price {
+  font-size: 14px; /* 设置购物车项价格的字体大小为14px */
+  color: #ff8c00; /* 设置购物车项价格的颜色为橙色 */
+}
+
+.ingredient-list {
+  margin-top: 10px; /* 设置配料列表顶部的外边距为10px */
+  
+}
+
+.ingredient-title {
+  font-size: 14px; /* 设置配料标题的字体大小为14px */
+  font-weight: bold; /* 设置配料标题的字体加粗 */
+}
+
+.ingredient-item {
+  font-size: 12px; /* 设置配料项的字体大小为12px */
+  color: #666; /* 设置配料项的字体颜色为深灰色 */
+}
+
+.cart-item-quantity {
+  display: flex; /* 设置数量部分为flex布局 */
+  align-items: center; /* 设置子元素在交叉轴（垂直轴）上居中对齐 */
+}
+
+.quantity-btn {
+  width: 30px; /* 设置数量按钮的宽度为30px */
+  height: 30px; /* 设置数量按钮的高度为30px */
+  background-color: #ff8c00; /* 设置数量按钮的背景色为橙色 */
+  color: white; /* 设置数量按钮的文本颜色为白色 */
+  border: none; /* 去掉数量按钮的边框 */
+  font-size: 20px; /* 设置数量按钮的字体大小为20px */
+  display: flex; /* 设置按钮为flex布局 */
+  justify-content: center; /* 水平居中对齐按钮中的内容 */
+  align-items: center; /* 垂直居中对齐按钮中的内容 */
+  margin: 0 10px; /* 设置数量按钮左右外边距为10px */
+  border-radius: 5px; /* 设置数量按钮的圆角半径为5px */
+  cursor: pointer; /* 设置鼠标悬停时显示为指针手型 */
+  
+  
+}
+
+.quantity {
+  font-size: 16px; /* 设置数量文本的字体大小为16px */
+
+}
+
+.delete-btn {
+  margin-top: 5px; /* 设置删除按钮顶部的外边距为10px */
+  background-color: #ff4d4f; /* 设置删除按钮的背景色为红色 */
+  color: white; /* 设置删除按钮的字体颜色为白色 */
+  border: none; /* 去掉删除按钮的边框 */
+  padding: 1px 1px; /* 设置删除按钮的内边距为5px 10px */
+  border-radius: 5px; /* 设置删除按钮的圆角半径为5px */
+}
+
+.cart-total {
+  font-size: 16px; /* 设置购物车总金额的字体大小为16px */
+  font-weight: bold; /* 设置购物车总金额的字体加粗 */
+  text-align: right; /* 设置总金额文本右对齐 */
+  margin-bottom: 20px; /* 设置总金额下方的外边距为20px */
+}
+
+.save-order-btn {
+  width: 96%; /* 设置保存订单按钮的宽度为100%（占满容器） */
+  padding: 12px; /* 设置保存订单按钮的内边距为12px */
+  background-color: #00bcd4; /* 设置保存订单按钮的背景色为青色 */
+  color: white; /* 设置保存订单按钮的字体颜色为白色 */
+  font-size: 18px; /* 设置保存订单按钮的字体大小为18px */
+  border: none; /* 去掉保存订单按钮的边框 */
+  border-radius: 5px; /* 设置保存订单按钮的圆角半径为5px */
+  margin-left: -10px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+
+}
+
+.ingredient-table {
+  margin-top: 10px; /* 设置配料表顶部的外边距为20px */
+  width: 95%; /* 设置按钮宽度为 100%，使其占据父容器的全部宽度 */
+  
+
+
+}
+
+.ingredient-header {
+  display: flex; /* 设置配料表头为flex布局 */
+  font-weight: bold; /* 设置配料表头字体加粗 */
+  margin-bottom: 10px; /* 设置配料表头底部的外边距为10px */
+  
+}
+
+.ingredient-name, .ingredient-quantity, .ingredient-unit {
+  flex: 1; /* 设置配料名、配料量、配料单位都占据相等的空间 */
+  text-align: left; /* 设置这些列中的文本左对齐 */
+  padding: 5px; /* 设置这些列中的文本内边距为5px */
+  margin-left: 30px; /* 设置左边距为 -5px，按钮将向左移动 5px */
+}
+
+.ingredient-row {
+  display: flex; /* 设置配料行为flex布局 */
+  margin-bottom: 3px; /* 设置每行的底部外边距为5px */
+}
+
+.ingredient-name, .ingredient-quantity, .ingredient-unit {
+  flex: 1; /* 设置配料名、配料量、配料单位都占据相等的空间 */
+  padding: 5px; /* 设置这些列的内边距为5px */
+
+}
